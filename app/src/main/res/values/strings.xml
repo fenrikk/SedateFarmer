@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Sedate Farmer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_trending_gifs">VIEW TRENDING GIFS</string>
+    <string name="back">BACK</string>
 </resources>

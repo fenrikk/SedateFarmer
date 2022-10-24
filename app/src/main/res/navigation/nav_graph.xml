@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/gifListFragment">
+    app:startDestination="@id/menuFragment">
 
     <fragment
         android:id="@+id/gifListFragment"
@@ -43,5 +43,17 @@
         <argument
             android:name="url"
             app:argType="string" />
+        <action
+            android:id="@+id/action_gifViewFragment_to_gifListFragment"
+            app:destination="@id/gifListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.nikovodi.sedatefarmer.view.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_gifListFragment"
+            app:destination="@id/gifListFragment" />
     </fragment>
 </navigation>
