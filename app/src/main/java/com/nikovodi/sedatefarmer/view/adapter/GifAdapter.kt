@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.nikovodi.sedatefarmer.R
 import com.nikovodi.sedatefarmer.data.model.GiphyData
 import com.nikovodi.sedatefarmer.databinding.GifItemBinding
 import com.nikovodi.sedatefarmer.other.RENDER_DISTANCE
@@ -35,9 +36,10 @@ class GifAdapter(
         }
         Glide.with(context)
             .load(getItem(position).images.fixed_height.url)
+            .placeholder(R.drawable.progress_animation)
             .diskCacheStrategy(DiskCacheStrategy.NONE)
             .into(holder.binding.itemImage)
-        holder.binding.itemTitle.text = getItem(position).title
+//        holder.binding.itemTitle.text = getItem(position).title
         holder.binding.root.setOnClickListener {
             onItemClicked(getItem(position))
         }

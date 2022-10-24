@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.nikovodi.sedatefarmer.databinding.FragmentGifListBinding
 import com.nikovodi.sedatefarmer.view.adapter.GifAdapter
 import com.nikovodi.sedatefarmer.viewmodel.GifListViewModel
@@ -42,7 +43,7 @@ class GifListFragment : Fragment() {
                 model.fetchGifList()
             })
         binding.fragmentGifListRecycleView.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
             adapter = gifAdapter
         }
 
