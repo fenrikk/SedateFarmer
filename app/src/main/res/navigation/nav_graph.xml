@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gifListFragment">
+
+    <fragment
+        android:id="@+id/gifListFragment"
+        android:name="com.nikovodi.sedatefarmer.view.fragments.GifListFragment"
+        android:label="fragment_gif_list"
+        tools:layout="@layout/fragment_gif_list" >
+        <action
+            android:id="@+id/list_to_full_view"
+            app:destination="@id/gifViewFragment" >
+            <argument
+                android:name="id" />
+            <argument
+                android:name="title" />
+            <argument
+                android:name="username" />
+            <argument
+                android:name="rating" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/gifViewFragment"
+        android:name="com.nikovodi.sedatefarmer.view.fragments.GifViewFragment"
+        android:label="fragment_gif_view"
+        tools:layout="@layout/fragment_gif_view" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="rating"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>
