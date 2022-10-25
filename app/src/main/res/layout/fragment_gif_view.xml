@@ -21,38 +21,47 @@
         tools:src="@tools:sample/avatars" />
 
 
-    <Button
+    <TextView
         android:id="@+id/full_view_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/circle"
+        android:fontFamily="@font/text"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@color/main"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/full_view_image" />
 
-    <Button
+    <TextView
         android:id="@+id/full_view_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/circle"
+        android:fontFamily="@font/text"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@color/main"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/full_view_title" />
 
-    <Button
+    <TextView
         android:id="@+id/full_view_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/circle"
+        android:fontFamily="@font/text"
+        android:textAlignment="center"
+        android:textAllCaps="true"
         android:textColor="@color/main"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/full_view_username" />
@@ -66,7 +75,7 @@
         android:background="@drawable/circle"
         android:text="@string/back"
         android:textColor="@color/main"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
