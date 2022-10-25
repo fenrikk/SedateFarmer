@@ -8,6 +8,7 @@ import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -47,15 +48,18 @@ class GifViewFragment : Fragment() {
 
         binding.buttonSave.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                saveImage(Glide.with(requireContext())
-                    .asBitmap()
-                    .load(args.url) // sample image
-                    .placeholder(android.R.drawable.progress_indeterminate_horizontal) // need placeholder to avoid issue like glide annotations
-                    .error(android.R.drawable.stat_notify_error) // need error to avoid issue like glide annotations
-                    .submit()
-                    .get())
+                saveImage(
+                    Glide.with(requireContext())
+                        .asBitmap()
+                        .load(args.url) // sample image
+                        .placeholder(android.R.drawable.progress_indeterminate_horizontal) // need placeholder to avoid issue like glide annotations
+                        .error(android.R.drawable.stat_notify_error) // need error to avoid issue like glide annotations
+                        .submit()
+                        .get()
+                )
             }
         }
+        Toast.makeText(requireContext(), "Saving image", Toast.LENGTH_SHORT).show()
     }
 
     private fun saveImage(image: Bitmap): String? {
@@ -80,7 +84,8 @@ class GifViewFragment : Fragment() {
                 e.printStackTrace()
             }
 
-            galleryAddPic(savedImagePath)}
+            galleryAddPic(savedImagePath)
+        }
         return savedImagePath
     }
 
